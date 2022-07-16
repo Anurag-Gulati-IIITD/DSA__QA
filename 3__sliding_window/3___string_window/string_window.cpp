@@ -38,7 +38,7 @@ string string_window(string s, string p)
 			// unwanted char: 
 			// 1. either it is not present in pattern
 			// 2. or its frequency is higher than required
-			while(FP[s[st]] == 0 || FP[s[st]] > FP[s[st]]) {
+			while(FP[s[st]] == 0 || FS[s[st]] > FP[s[st]]) {
 				FS[s[st]]--;
 				st++;
 			}
@@ -62,8 +62,8 @@ string string_window(string s, string p)
 
 int main()
 {
-	string s = "fizzbuzz";
-	string p = "fuzz";
+	string s = "QQQW";
+	string p = "QQ";
 
 	cout << string_window(s, p) << endl;
 
